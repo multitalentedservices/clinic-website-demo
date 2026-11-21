@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services & Fees — Sehat Family Clinic (Demo)</title>
+<meta name="description" content="All demo clinic services with durations and PKR fees: general medicine, children’s health, dental care and skin & wellness. Filter by department.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="demo-ribbon"><strong>DEMO</strong> — Sehat Family Clinic is a fictional clinic. This website is a portfolio demo; no real appointments are booked.</div>
+<header class="site-header"><div class="wrap header-in">
+<a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">+</span><span>Sehat Family Clinic<small>Model Town, Gujranwala · Demo</small></span></a>
+<nav class="main-nav" aria-label="Main"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html" aria-current="page">Services</a></li>
+<li><a href="doctors.html">Doctors</a></li>
+<li><a href="booking.html">Book Appointment</a></li>
+<li><a href="info.html">Patient Info</a></li>
+<li><a href="visit.html">Visit Us</a></li>
+</ul></nav>
+<a class="btn small" href="booking.html">Book now</a>
+</div></header>
+<main id="main">
+
+<section class="section"><div class="wrap">
+<p class="eyebrow">Services</p><h1>Services &amp; fees</h1>
+<p class="lede">Every service lists its duration and fee in PKR before you book. Fees are demo data for this fictional clinic.</p>
+<div class="chips" data-service-filter role="group" aria-label="Filter services by department">
+<button type="button" class="chip" data-dept="all" aria-pressed="true">All departments</button>
+<button type="button" class="chip" data-dept="general" aria-pressed="false">General Medicine</button>
+<button type="button" class="chip" data-dept="children" aria-pressed="false">Children's Health</button>
+<button type="button" class="chip" data-dept="dental" aria-pressed="false">Dental Care</button>
+<button type="button" class="chip" data-dept="skin" aria-pressed="false">Skin &amp; Wellness</button>
+</div>
+<p aria-live="polite"><strong data-service-count></strong></p>
+<div class="grid cols-3" data-services-grid></div>
+<div class="notice" style="margin-top:26px"><h2>Not sure which service you need?</h2><p>Book a General Consultation and the doctor will point you to the right department. This demo never promises a diagnosis or a result — it simply books you a visit.</p><p><a class="btn" href="booking.html">Book an appointment</a></p></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="footer-grid">
+<div><h3>Sehat Family Clinic (Demo)</h3><p>A fictional family clinic in Model Town, Gujranwala, created as a website portfolio demo. All practitioners, fees and availability are demo data.</p></div>
+<div><h3>Explore</h3><p><a href="services.html">Services &amp; fees</a><br><a href="doctors.html">Our doctors</a><br><a href="booking.html">Book an appointment</a><br><a href="info.html">Patient information</a></p></div>
+<div><h3>Visit</h3><p>14-B Main Boulevard, Model Town, Gujranwala (demo address)<br>Mon–Sat 09:00–20:00 · Closed Sundays<br><a href="visit.html">Directions &amp; contact</a></p></div>
+</div>
+<p class="footer-note">DEMO: this is a fictional clinic website built as a portfolio demo. No real appointment is booked, no message is sent, and nothing you enter leaves your browser. Health information here is general demo copy and is not medical advice.</p>
+</div></footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

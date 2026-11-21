@@ -1,0 +1,62 @@
+PASS  data: 12 services
+PASS  data: 4 doctors
+PASS  data: 4 departments
+PASS  data: every service has fee/duration/desc
+PASS  data: service ids unique
+PASS  data: doctors never work closed Sunday
+PASS  data: each doctor covers own department
+PASS  data: 5 FAQs
+PASS  data: no cure/guarantee claims in data
+PASS  filter: all = 12
+PASS  filter: dental = 3
+PASS  filter: children only children
+PASS  doctors: dental -> Omar only
+PASS  doctors: general -> Amina only
+PASS  date: todayStr fixed clock
+PASS  date: past detection
+PASS  date: 2026-11-29 is closed Sunday
+PASS  validate: past date rejected
+PASS  validate: closed Sunday rejected
+PASS  validate: doctor off-day (Monday) rejected by name
+PASS  validate: Omar Wednesday accepted
+PASS  validate: empty date rejected
+PASS  slots: 11 slots 09:00-19:00 from clinic hours
+PASS  slots: deterministic
+PASS  slots: taken mix present
+PASS  slots: today elapsed slots marked past
+PASS  resolve: first available skin Wed -> Bilal
+PASS  resolve: first available skin Sat -> Bilal (works Sat)
+PASS  patient: valid passes
+PASS  patient: short name rejected
+PASS  patient: bad phone rejected
+PASS  patient: +92 format accepted
+PASS  lead: short message rejected
+PASS  lead: valid passes
+PASS  fees: PKR formatting
+PASS  ref: SF-DEMO-#### deterministic
+PASS  contrast: body ink #14313B on white = 13.71:1 (>= 4.5)
+PASS  contrast: ink on surface #F2F7F7 = 12.68:1 (>= 4.5)
+PASS  contrast: muted #3D5A63 on white = 7.39:1 (>= 4.5)
+PASS  contrast: muted on surface = 6.84:1 (>= 4.5)
+PASS  contrast: white on accent #0E5A6D (buttons) = 7.77:1 (>= 4.5)
+PASS  contrast: accent-dark #0A4351 on white (links) = 10.86:1 (>= 4.5)
+PASS  contrast: white on accent-dark (hover) = 10.86:1 (>= 4.5)
+PASS  contrast: accent-dark on tint #E6F0F1 (badges) = 9.36:1 (>= 4.5)
+PASS  contrast: error #B3261E on white = 6.54:1 (>= 4.5)
+PASS  contrast: ink on tint (notices) = 11.81:1 (>= 4.5)
+PASS  contrast: footer note #DCEBEC on ink #14313B = 11.18:1 (>= 4.5)
+PASS  contrast: white on ink (ribbon/footer) = 13.71:1 (>= 4.5)
+PASS  contrast: accent #0E5A6D focus outline on white (non-text 3:1) = 7.77:1 (>= 3)
+PASS  ga4: no live google-analytics endpoints in source
+PASS  ga4: stub present with DEMO placeholder ID
+PASS  links: every internal href/src resolves; every page has meta description + DEMO label
+PASS  seo: 6 unique titles
+PASS  seo: MedicalClinic JSON-LD on index
+PASS  seo: sitemap.xml + robots.txt present
+PASS  copy: no lorem ipsum
+PASS  copy: no promissory medical claims in site source
+PASS  weights: code (incl tests/shoot) < 400 KB — actual 87 KB
+PASS  weights: media <= 1.6 MB — actual 684 KB
+PASS  weights: every photo <= ~120 KB
+
+60 PASS / 0 FAIL

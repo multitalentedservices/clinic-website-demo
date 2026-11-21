@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book an Appointment — Sehat Family Clinic (Demo)</title>
+<meta name="description" content="Book a demo appointment: choose a service, practitioner, date and time. Demo only — no real appointment is booked.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="demo-ribbon"><strong>DEMO</strong> — Sehat Family Clinic is a fictional clinic. This website is a portfolio demo; no real appointments are booked.</div>
+<header class="site-header"><div class="wrap header-in">
+<a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">+</span><span>Sehat Family Clinic<small>Model Town, Gujranwala · Demo</small></span></a>
+<nav class="main-nav" aria-label="Main"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="doctors.html">Doctors</a></li>
+<li><a href="booking.html" aria-current="page">Book Appointment</a></li>
+<li><a href="info.html">Patient Info</a></li>
+<li><a href="visit.html">Visit Us</a></li>
+</ul></nav>
+<a class="btn small" href="booking.html">Book now</a>
+</div></header>
+<main id="main">
+
+<section class="section"><div class="wrap">
+<p class="eyebrow">Appointments</p><h1>Book an appointment</h1>
+<p class="lede">Five short steps. The calendar respects each doctor’s working days and the clinic’s closed Sunday.</p>
+<div data-booking>
+<ol class="steps"><li>1 · Service</li><li>2 · Practitioner</li><li>3 · Date &amp; time</li><li>4 · Your details</li><li>5 · Review</li></ol>
+<section data-step="1"><h2>1. Choose a service</h2><div class="pick-grid" data-booking-services></div><p class="error-text" data-step-error="1" aria-live="polite"></p><p><button type="button" class="btn" data-next>Continue</button></p></section>
+<section data-step="2" hidden><h2>2. Choose a practitioner</h2><div class="pick-grid" data-booking-doctors></div><p class="error-text" data-step-error="2" aria-live="polite"></p><p><button type="button" class="btn secondary" data-back>Back</button> <button type="button" class="btn" data-next>Continue</button></p></section>
+<section data-step="3" hidden><h2>3. Choose a date &amp; time</h2>
+<div class="field"><label for="appt-date">Appointment date</label><input type="date" id="appt-date" data-booking-date><p class="hint">Open Monday–Saturday, 09:00–20:00. Closed Sundays.</p></div>
+<p class="meta" data-slot-note aria-live="polite"></p>
+<div class="slot-grid" data-booking-slots></div>
+<p class="error-text" data-step-error="3" aria-live="polite"></p>
+<p><button type="button" class="btn secondary" data-back>Back</button> <button type="button" class="btn" data-next>Continue</button></p></section>
+<section data-step="4" hidden><h2>4. Patient details</h2>
+<div class="field"><label for="p-name">Patient full name</label><input type="text" id="p-name" data-patient-name autocomplete="name" placeholder="e.g. Fatima Khan"><p class="error-text" data-error-for="name" aria-live="polite"></p></div>
+<div class="field"><label for="p-phone">Mobile number</label><input type="tel" id="p-phone" data-patient-phone autocomplete="tel" placeholder="e.g. 0321 1234567"><p class="hint">A Pakistani mobile number, so the clinic could confirm your visit.</p><p class="error-text" data-error-for="phone" aria-live="polite"></p></div>
+<div class="field"><label for="p-note">Note for the doctor (optional)</label><textarea id="p-note" data-patient-note placeholder="Anything brief the doctor should know before the visit"></textarea></div>
+<p><button type="button" class="btn secondary" data-back>Back</button> <button type="button" class="btn" data-next>Review booking</button></p></section>
+<section data-step="5" hidden><h2>5. Review &amp; confirm</h2><div class="panel" data-review></div>
+<p style="margin-top:18px"><button type="button" class="btn secondary" data-back>Back</button> <button type="button" class="btn" data-confirm>Confirm demo appointment</button></p></section>
+<div class="success" data-confirmation hidden></div>
+</div>
+<section style="margin-top:44px"><h2>My Appointments</h2><p class="meta">Demo bookings saved in this browser only.</p><div class="grid cols-2" data-my-appointments></div></section>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="footer-grid">
+<div><h3>Sehat Family Clinic (Demo)</h3><p>A fictional family clinic in Model Town, Gujranwala, created as a website portfolio demo. All practitioners, fees and availability are demo data.</p></div>
+<div><h3>Explore</h3><p><a href="services.html">Services &amp; fees</a><br><a href="doctors.html">Our doctors</a><br><a href="booking.html">Book an appointment</a><br><a href="info.html">Patient information</a></p></div>
+<div><h3>Visit</h3><p>14-B Main Boulevard, Model Town, Gujranwala (demo address)<br>Mon–Sat 09:00–20:00 · Closed Sundays<br><a href="visit.html">Directions &amp; contact</a></p></div>
+</div>
+<p class="footer-note">DEMO: this is a fictional clinic website built as a portfolio demo. No real appointment is booked, no message is sent, and nothing you enter leaves your browser. Health information here is general demo copy and is not medical advice.</p>
+</div></footer>
+<script src="js/data.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
