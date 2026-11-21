@@ -18,5 +18,22 @@
   }
   window.SehatReveal.observe(document);
   setTimeout(function () { document.querySelectorAll('.reveal').forEach(reveal); }, 2000);
+
+  /* Mobile nav (hamburger <=768px) */
+  var navToggle = document.querySelector('.nav-toggle');
+  var mainNav = document.getElementById('main-nav');
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', function () {
+      var open = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    mainNav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) { mainNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); navToggle.setAttribute('aria-label', 'Open menu'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('open')) { mainNav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); navToggle.setAttribute('aria-label', 'Open menu'); navToggle.focus(); }
+    });
+  }
   if (window.SehatAnalytics) window.SehatAnalytics.track('pageview', { page: location.pathname.split('/').pop() || 'index.html' });
 })();

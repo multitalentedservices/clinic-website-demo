@@ -17,7 +17,7 @@
         '</div></article>';
     },
     doctorCard: function (d, tall) {
-      return '<article class="card reveal"><div class="card-img' + (tall ? ' tall' : '') + '"><img src="' + d.img + '" alt="' + esc(d.alt) + '" loading="lazy"></div>' +
+      return '<article class="card reveal"><div class="card-img' + (tall ? ' tall' : '') + '"><img src="' + d.img + '" alt="' + esc(d.alt) + '"></div>' +
         '<div class="card-body"><h3>' + esc(d.name) + '</h3>' +
         '<p class="meta">' + esc(d.speciality) + '<br>' + esc(d.quals) + '</p>' +
         '<p>' + esc(d.note) + '</p>' +
