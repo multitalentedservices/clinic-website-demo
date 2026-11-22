@@ -6,7 +6,7 @@
 <title>Sehat Family Clinic (Demo) — Family Clinic in Gujranwala</title>
 <meta name="description" content="Fictional family clinic demo in Model Town, Gujranwala: services, doctors and a working demo appointment booking.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalClinic","name":"Sehat Family Clinic (Demo)","description":"Fictional family clinic website demo in Gujranwala with online appointment booking demo.","address":{"@type":"PostalAddress","streetAddress":"14-B Main Boulevard, Model Town","addressLocality":"Gujranwala","addressCountry":"PK"},"openingHours":"Mo-Sa 09:00-20:00","medicalSpecialty":["GeneralPractice","Pediatric","Dentistry","Dermatology"]}</script>
@@ -36,7 +36,17 @@
 <div class="trust-row"><span class="trust-chip">Fees shown before you book</span><span class="trust-chip">Named practitioners</span><span class="trust-chip">Mon–Sat · 09:00–20:00</span></div>
 <p><a class="btn" href="booking.html">Book an appointment</a> <a class="btn secondary" href="services.html">See services &amp; fees</a></p>
 </div>
-<div class="hero-img reveal"><img src="assets/hero.jpg" alt="Doctor greeting a patient in the bright waiting area of Sehat Family Clinic (demo photo)"></div>
+<div class="hero-img reveal"><img class="hero-frame is-first" src="assets/hero.jpg" alt="Doctor greeting a patient in the bright waiting area of Sehat Family Clinic (demo photo)"><img class="hero-frame" src="assets/consultation.jpg" alt="" aria-hidden="true"><img class="hero-frame" src="assets/treatment.jpg" alt="" aria-hidden="true"></div>
+</div></section>
+<section class="section stats-band"><div class="wrap">
+<h2 class="reveal">The clinic in numbers</h2>
+<p class="lede">Demo figures for this fictional clinic — counted from the departments, services and doctors listed on this very site. Nothing here is a claim about a real clinic.</p>
+<div class="stats-grid">
+<div class="stat reveal"><span class="stat-num" data-count="12">12</span><span class="stat-label">Services listed, each with its fee</span></div>
+<div class="stat reveal"><span class="stat-num" data-count="4">4</span><span class="stat-label">Departments to start from</span></div>
+<div class="stat reveal"><span class="stat-num" data-count="4">4</span><span class="stat-label">Named doctors you can book with</span></div>
+<div class="stat reveal"><span class="stat-num" data-count="6">6</span><span class="stat-label">Days a week open (Mon–Sat)</span></div>
+</div>
 </div></section>
 <section class="section"><div class="wrap">
 <h2 class="reveal">Start with a department</h2>
@@ -73,5 +83,8 @@
 <script src="js/analytics.js"></script>
 <script src="js/render.js"></script>
 <script src="js/main.js"></script>
+<script defer src="assets/vendor/gsap.min.js"></script>
+<script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+<script defer src="js/premium-index.js"></script>
 </body>
 </html>

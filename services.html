@@ -6,8 +6,9 @@
 <title>Services & Fees — Sehat Family Clinic (Demo)</title>
 <meta name="description" content="All demo clinic services with durations and PKR fees: general medicine, children’s health, dental care and skin & wellness. Filter by department.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -31,6 +32,23 @@
 <section class="section"><div class="wrap">
 <p class="eyebrow">Services</p><h1>Services &amp; fees</h1>
 <p class="lede">Every service lists its duration and fee in PKR before you book. Fees are demo data for this fictional clinic.</p>
+<h2>Services at a glance</h2>
+<p class="lede">All twelve demo services in one slider — move through them with the buttons, the dots, your keyboard or a swipe. The full filterable list follows below.</p>
+<div class="swiper svc-swiper"><div class="swiper-wrapper">
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">General Medicine</span><h3>General Consultation</h3><p>A full consultation for a new or ongoing health concern, with time to talk it through.</p><p class="meta">30 minutes</p><p class="price">PKR 1,500</p><a class="btn small secondary" href="booking.html?service=gen-consult">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">General Medicine</span><h3>Follow-up Visit</h3><p>A shorter review visit after a recent consultation, to check progress and next steps.</p><p class="meta">20 minutes</p><p class="price">PKR 1,000</p><a class="btn small secondary" href="booking.html?service=gen-follow">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">General Medicine</span><h3>Annual Health Check</h3><p>A yearly once-over: history, basic measurements and a written summary of findings.</p><p class="meta">60 minutes</p><p class="price">PKR 4,500</p><a class="btn small secondary" href="booking.html?service=gen-check">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Children's Health</span><h3>Child Consultation</h3><p>A consultation for your child with our children’s doctor, parents welcome throughout.</p><p class="meta">30 minutes</p><p class="price">PKR 1,800</p><a class="btn small secondary" href="booking.html?service=child-consult">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Children's Health</span><h3>Vaccination Visit</h3><p>A scheduled vaccination visit. Please bring your child’s vaccination record card.</p><p class="meta">20 minutes</p><p class="price">PKR 1,200</p><a class="btn small secondary" href="booking.html?service=child-vacc">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Children's Health</span><h3>Growth & Development Check</h3><p>Height, weight and development milestones recorded and discussed with parents.</p><p class="meta">30 minutes</p><p class="price">PKR 2,000</p><a class="btn small secondary" href="booking.html?service=child-growth">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Dental Care</span><h3>Dental Examination & Cleaning</h3><p>A complete dental examination with a professional clean and practical home-care advice.</p><p class="meta">45 minutes</p><p class="price">PKR 3,500</p><a class="btn small secondary" href="booking.html?service=dent-exam">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Dental Care</span><h3>Dental Filling</h3><p>Treatment of a cavity with a filling. The dentist confirms suitability at examination first.</p><p class="meta">45 minutes</p><p class="price">PKR 5,000</p><a class="btn small secondary" href="booking.html?service=dent-filling">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Dental Care</span><h3>Child Dental Check</h3><p>A gentle first dental check for children, at their pace, with parents in the room.</p><p class="meta">30 minutes</p><p class="price">PKR 2,500</p><a class="btn small secondary" href="booking.html?service=dent-child">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Skin & Wellness</span><h3>Skin Consultation</h3><p>A consultation about a skin concern, with an honest discussion of options and next steps.</p><p class="meta">30 minutes</p><p class="price">PKR 2,500</p><a class="btn small secondary" href="booking.html?service=skin-consult">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Skin & Wellness</span><h3>Skin Review Visit</h3><p>A follow-up review of a concern seen at this clinic, to check how things are going.</p><p class="meta">20 minutes</p><p class="price">PKR 1,800</p><a class="btn small secondary" href="booking.html?service=skin-review">Book this service</a></div></article></div>
+<div class="swiper-slide"><article class="card"><div class="card-body"><span class="badge">Skin & Wellness</span><h3>Personal Skin-Care Plan</h3><p>A written everyday skin-care plan built around your skin type and routine.</p><p class="meta">40 minutes</p><p class="price">PKR 3,000</p><a class="btn small secondary" href="booking.html?service=skin-plan">Book this service</a></div></article></div>
+</div></div>
+<div class="svc-controls"><button type="button" class="svc-btn svc-prev" aria-label="Previous services">←</button><button type="button" class="svc-btn svc-next" aria-label="Next services">→</button><div class="svc-pagination" aria-hidden="true"></div></div>
 <div class="chips" data-service-filter role="group" aria-label="Filter services by department">
 <button type="button" class="chip" data-dept="all" aria-pressed="true">All departments</button>
 <button type="button" class="chip" data-dept="general" aria-pressed="false">General Medicine</button>
@@ -56,5 +74,7 @@
 <script src="js/analytics.js"></script>
 <script src="js/render.js"></script>
 <script src="js/main.js"></script>
+<script defer src="assets/vendor/swiper-bundle.min.js"></script>
+<script defer src="js/premium-services.js"></script>
 </body>
 </html>

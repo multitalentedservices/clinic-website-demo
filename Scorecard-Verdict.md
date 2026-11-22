@@ -33,3 +33,45 @@ Reasons (defects as: what is wrong · where · what fixed looks like):
 Next step: [ ] To AICOS-025 release gate   [X] Back to Gate 5 (evidence completions only — both are external to the build)   [ ] Back to Gate 2
 
 Disclosures: (1) the screenshot harness was fixed mid-pass for the no-JS run (settle helper skipped when page JS is disabled by design) and the run re-executed clean; (2) a dead unused line was removed from tests.js before its first successful run. No assertion was amended. Both are repeated in BUILD-NOTES.md, not hidden.
+
+---
+
+## Addendum — Re-verification FIX RUN (2026-11-21, later the same day)
+
+Independent re-verification (`Reverification-2026-11-21/REPORT.md`) found 1 visible defect.
+FIXED, re-shot and read; battery **60/60 PASS** unamended after fixes:
+
+- **C-1 (visible) — no mobile menu: the desktop nav wrapped into 3 rows + the Book now CTA on
+  a 4th row at 390px, and the CTA still wrapped at 768px.** Fix: a proper hamburger in the
+  clinic's own system — a pill outline "Menu" toggle (the site's button geometry and tokens)
+  at ≤768px on all 6 pages; the nav collapses behind it as a full-width in-container panel
+  (aria-expanded, closes on link tap / Escape); "Book now" stays visible in the header action
+  row at every width. Proof: DOM probe at 768 + 390 (closed: nav display none, header a single
+  74px row at 768; open: panel block, expanded=true, 6 links) and captures read by eye —
+  `fix-clinic/index-phone.png` (tidy logo row + action row) and
+  `fix-clinic/index-state-menu-phone.png` (open panel, current page highlighted).
+- **Same-family audit fixes (no defect was filed against this site):** reveal opacity-gating
+  removed (v3 pattern — position-only rise, opacity never gated) and all content imagery made
+  eager (3 page heroes + the doctor-card template in `js/render.js`), so no photo can freeze
+  blank at any scroll speed. Re-shoot: 24 page×viewport combos, 0 blank / 0 overflow.
+
+**Score: unchanged at 90/100 — REJECT (evidence bar only).** Held points remain the
+served-preview CWV (Area 7) and the AICOS-112 §0 sign-off (Area 1).
+
+---
+
+## Addendum — PREMIUM UPGRADE (2026-11-22, ladder site #5)
+
+Deliberately RESTRAINED premium, per plan §5 — this site remains the accessibility exemplar.
+
+- **Animated numbers block** (index): count-up figures 12 / 4 / 4 / 6 — counted ONLY from this site's own demo data (12 services, 4 departments, 4 doctors, 6 open days Mon–Sat in `js/data.js`); the HTML carries the final figures, so no-JS/reduced-motion read the completed block. New-element contrast measured in the premium checks: stat numeral and label both ≥4.5:1 (accent-dark/ink-2 on white).
+- **Services slider** (services.html): Swiper 14.4.0, all 12 services as static HTML slides in the site's own card system (name/desc/duration/fee generated from `js/data.js` — identical to the filter grid below, which is untouched). Keyboard-operable (verified: focus Next + Enter advances; 3px focus outline), no autoplay; reduced-motion/no-JS = the slides render as a complete static grid.
+- **Hero motion** (index): ONE signature moment — a GSAP ScrollTrigger-scrubbed photo sequence crossfading the hero through the site's existing consultation/treatment photos (no video; frames 2–3 are aria-hidden decorative duplicates; reduced-motion/no-JS = first photo, complete).
+- **New technique:** count-up + scrubbed sequence under the hard AA gate — battery's 13 contrast assertions still pass, keyboard walk unaffected, reduced-motion static state re-proven in the premium checks.
+- **Deviations (honest):** (1) **No Lenis on this site** — smooth-scroll was dropped by design for the AA exemplar AND because the unamended battery's recursive 400 KB code-weight gate measured 403 KB with Lenis vendored (a real FAIL); without it: 384 KB, battery green. P2 therefore recorded as a deliberate deviation, not a pass. (2) P4 stays restrained (existing display scale kept — clinical restraint is the design).
+- **Batteries:** `tests.js` UNAMENDED **60/60 PASS** before and after. Separate `premium-checks.js` run (filed as `premium-checks-output.log`): 49 PASS; the 14 "console" flags are one repeated sandbox artifact — the pre-existing Google Fonts stylesheet failing with ERR_TUNNEL_CONNECTION_FAILED in this offline browser (untouched pages flag identically); a follow-up probe recorded **0 page errors and 0 JS console errors** on every upgraded page. P1 re-probe: 0 blue / 0 underlined links on every page × viewport.
+- **JS weights (gzip, total per page):** index (hero) **52.8 KB** ≤90 ✓ · services (slider) **50.2 KB** ≤90 ✓ · all other pages **6.4 KB** ≤20 ✓.
+- **Screenshots:** full set re-shot via the project's own `shoot.js` (18 combos, 0 problem combos) + `screenshots/signature-moment.png` (mid-scrub crossfade + numbers block, read by eye — clean).
+
+**Re-score: Area 4 (Animation & interactions) 9 → 10** (signature scrub scene + count-up + slider, all with proven static states). All other areas unchanged — Area 7 still holds 5 points for the unmeasured served-preview CWV.
+**TOTAL: 90 → 91 / 100 — VERDICT UNCHANGED: REJECT (evidence bar only)** — the same two external items remain outstanding (served-preview Lighthouse/CWV; AICOS-112 §0 sign-off). No code defects outstanding.

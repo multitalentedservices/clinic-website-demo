@@ -1,0 +1,13 @@
+services filter dental -> 3 services
+step1 error -> Please choose a service to continue.
+step2 doctor options for dental = 2 (Omar + First available expected)
+off-day error -> Dr Omar Farooq is not available on Mondays — please choose one of their working days.
+slot chosen -> 2026-11-25 09:00; slot note -> Showing times for Dr Omar Farooq on 2026-11-25. Struck-through times are unavailable.
+step4 phone error -> Please enter a valid Pakistani mobile number (e.g. 0321 1234567).
+phone error after fix (must be empty) -> ""
+review -> Service: Dental Examination & Cleaning (45 min)Practitioner: Dr Omar FarooqWhen: 2026-11-25 at 09:00Patient: Fatima Khan · 03211234567Fee due at clinic: PKR 3,500
+confirmation -> Appointment recorded — SF-DEMO-5598Dental Examination & Cleaning with Dr Omar Farooq on 2026-11-25 at 09:00 for Fatima Khan. Fee due at clinic: PKR 3,500.Demo notice: this is a demo website for a fictional clinic. No rea
+FIRING localStorage appointments = [{"serviceId":"dent-exam","doctorId":"omar","date":"2026-11-25","time":"09:00","name":"Fatima Khan","phone":"03211234567","note":"","fee":3500,"ref":"SF-DEMO-5598"}]
+FIRING GA4-stub log events = pageview,pageview,appointment_complete
+FIRING lead log = [{"name":"Ahmed Raza","phone":"03009876543","message":"Please share your Saturday timings.","at":"2026-11-21T15:49:40.115Z"}]
+FIRING GA4-stub after lead = pageview,pageview,appointment_complete,pageview,lead_submit
